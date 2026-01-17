@@ -1,10 +1,15 @@
 from pathlib import Path
+import time
 
-p = Path("C:\\Users\\munta\\Downloads") # Windows
+
+directory = input("Enter the directory path to sort files: ").strip().strip('"')
+p = Path(directory) # Windows
 
 # ------------------------------
-# Variables for folder paths
+# Variables 
 # ------------------------------
+run = True
+
 image_file = p / "Images"
 text_file = p / "Texts"
 vedio_file = p / "Video"
@@ -84,7 +89,40 @@ def sort_files():
                 file.rename(other_file / file.name)
 
 # ------------------------------
+# View folders function
+# ------------------------------
+def view_folders():
+    for item in p.iterdir():
+        print(item)
+        time.sleep(0.2)
+
+
+    
+
+# ------------------------------
 # Main Execution
 # ------------------------------
-check_folder(image_file, text_file, vedio_file, audio_file, archive_file, other_file)
-sort_files()
+
+print("Welcome to the File Sorter Program!")
+
+while run == True:
+    
+    print ("""
+Please select an option:
+1. Vewing filders in the directory
+2. Sort files in the directory
+3. Exit
+""")
+    option = input("Enter your choice (1/2/3): ")
+
+    if option == '1':
+        view_folders()
+    elif option == '2':
+        check_folder(image_file, text_file, vedio_file, audio_file, archive_file, other_file)
+        sort_files()
+    elif option == '3':
+        print("Exiting the program.")
+        run = False
+    else:
+        print("Invalid option. Please try again.")
+    
