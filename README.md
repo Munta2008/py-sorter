@@ -12,4 +12,8 @@ A simple Python script that automatically sorts files in a directory into folder
 2. Groups files by extension
 3. Moves each file into a matching folder
 
+<<<<<<< HEAD
 For more projects go to [text](https://github.com/Munta2008/Muntaseer-Hossain)
+=======
+For more projects go to [Muntaseer Hossain](https://github.com/Munta2008/Muntaseer-Hossain)
+>>>>>>> e816ef19a7ca042896ec364e4803f9c6afaf4349
